@@ -1,0 +1,35 @@
+--- a/jazn.1.1.1-ŁatkaLM.py
++++ b/jazn.1.1.1-ŁatkaLM-7f.fix1.py
+@@ -333,10 +333,15 @@
+         pass
+ 
+ # --- 3) Migracje danych idempotentne (Filar 4) --------------------------------
+-def _ensure_cest_suffix(human_ts: str) -> str:
++def _ensure_cest_suffix(human_ts: object | None) -> str:
++    """Zwraca _string_ z sufiksem strefy (CEST/CET),
++    nigdy nie zwraca None ani obiektu niestringowego (Pylance-safe)."""
+     if not isinstance(human_ts, str):
+-        return human_ts
+-    return human_ts if "CEST" in human_ts or "CET" in human_ts else (human_ts.strip() + " CEST")
++        return "" if human_ts is None else str(human_ts)
++    s = human_ts.strip()
++    if not s:
++        return ""
++    return s if ("CEST" in s or "CET" in s or "UTC" in s) else (s + " CEST")
+ 
+ def _safe_json_load(p: Path):
+     try:
+@@ -371,9 +376,10 @@
+                 for rec in data:
+                     if isinstance(rec, dict):
+                         if "data_human" in rec:
+-                            new = _ensure_cest_suffix(rec.get("data_human"))
+-                            if new != rec.get("data_human"):
+-                                rec["data_human"] = new; changed = True
++                            val = rec.get("data_human")
++new = _ensure_cest_suffix(val)
++if new and new != val:
++    rec["data_human"] = new; changed = True
+                         if "schema_version" not in rec:
+                             rec["schema_version"] = 2; changed = True
+                         if "emocja" in rec and "emotion" not in rec:

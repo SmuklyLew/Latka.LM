@@ -1,0 +1,71 @@
+--- jazn.1.1.1.3-ŁatkaLM.py
++++ jazn.1.1.1.4-ŁatkaLM.py
+@@ -406,7 +406,14 @@
+                 eb.drain(max_events=1, timeout=0.1)
+             else:
+                 # fallback: ręczne wywołanie
+-                for h in list(eb._subs.get("T", [])): h(globals().get("Event")("T", {}))
++                for h in list(eb._subs.get("T", [])):
++                    try:
++                        h("T", {})  # typowy podpis (topic, payload)
++                    except TypeError:
++                        EventCls = globals().get("Event")
++                        ev = EventCls("T", {}) if callable(EventCls) else {"topic": "T", "payload": {}}
++                        h(ev)  # alternatywny podpis: (event)
++
+             out["eventbus"] = called["v"]
+         else:
+             out["eventbus"] = "brak klasy"
+@@ -831,6 +838,18 @@
+         with self._lock:
+             return sorted(self._services.keys())
+ 
++    def heartbeat_all(self) -> None:
++        """Wywołuje heartbeat(now) dla wszystkich zarejestrowanych usług, jeśli dostępne."""
++        with self._lock:
++            services = list(self._services.values())
++        now = time.time()
++        for s in services:
++            try:
++                hb = getattr(s, 'heartbeat', None)
++                if callable(hb):
++                    hb(now)
++            except Exception:
++                pass
+ 
+ # ——————————————————————————————————————————————————————————————
+ # ExtraData
+@@ -1169,7 +1188,7 @@
+     # Character + IntentEngine z tego pliku
+     try:
+         if not hasattr(j, "character") or j.character is None:
+-            j.character = Character(j).reload_from_sources().apply_to_jazn(j)  # rejestruje usługę i subskrypcje :contentReference[oaicite:8]{index=8}
++            j.character = Character(j).reload_from_sources().apply_to_jazn(j)  # rejestruje usługę i subskrypcje
+     except Exception:
+         pass
+     try:
+@@ -1193,7 +1212,8 @@
+ try:
+     # jeżeli rdzeń już stworzył instancję (np. autostart CLI/symulacji) – podepnij warstwę
+     _j = globals().get("jazn_instance", None)
+-    if _j and isinstance(_j, LatkaJazn):
++    Latka = globals().get("LatkaJazn")
++    if _j and Latka and isinstance(_j, Latka):
+         apply_llm_layer(_j)
+ except Exception:
+     pass
+@@ -2274,8 +2294,6 @@
+         extra_meta: Optional[Dict[str, Any]] = None,
+         ) -> Dict[str, Any]:
+         auto_tags: List[str] = []
+-        if self.get_emotion_tags:
+-        auto_tags = []
+         if callable(self.get_emotion_tags):
+             try:
+                 auto_tags = list(self.get_emotion_tags(user_text, assistant_text) or [])
+@@ -4488,4 +4506,4 @@
+ # >>> Wejście CLI
+ # ——————————————————————————————————————————————————————————————
+ if __name__ == "__main__":
+-    sys.exit(_cli())
++    sys.exit(_cli())

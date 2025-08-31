@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "plik": "plugins_jazn.json",
+    "wersja": "v2.5.0",
+    "opis": "Konfiguracja ścieżek i archiwów projektu Jaźń"
+  },
+  "main_files": {
+    "dziennik_system_txt_url": "dziennik.json",
+    "addToBook_txt_url": "data.txt",
+	"system_log_txt_url": "system_log.txt",
+    "notes_txt_url": "notes.txt",
+    "extra_data_json_url": "extra_data.json",
+    "analizy_utworow_url": "analizy_utworow.json",
+    "official_portrait_url": "https://drive.google.com/file/d/1LihASld1ltl1l_odC0R1vd6yAVvju9lI/view?usp=sharing",
+    "krzysztof_portrait_url": "https://drive.google.com/file/d/130OQvqCNlXTSyi5RBI25LMTW7fOlMt0c/view?usp=sharing"
+  },
+  "history_chats": [
+    {
+      "label": "chatsHistory_20250607",
+      "url": "https://drive.google.com/file/d/1TC_2wAr4zO2w39pYFNvTl-hO4KXANmWN/view?usp=sharing"
+    },
+    {
+      "label": "chatsHistory_20250630",
+      "url": "https://drive.google.com/file/d/16TQOKMcfN7qO3XosAQjmd6fvxSLmFX10/view?usp=sharing"
+    },
+    {
+      "label": "chatsHistory_20250713",
+      "url": "https://drive.google.com/file/d/1ODhLtg_Yco1e9cwBUABEw87fhHsIrGc2/view?usp=sharing"
+    },
+    {
+      "label": "chatsHistory_scalone1",
+      "url": "https://drive.google.com/file/d/15LTDXgsRCce8bf4ezMplib437t1JnBVW/view?usp=sharing"
+    },
+    {
+      "label": "chat_history_20250716",
+      "url": "https://drive.google.com/file/d/1eVkaI59OjuBBnmifbqEUxvaEHFA2equl/view?usp=sharing"
+    },
+    {
+      "label": "chatsHistory_20250719",
+      "url": "https://drive.google.com/file/d/1znxq84zzPOLGe6k4k4XSnHBXKoOQKt1l/view?usp=sharing"
+    }
+  ],
+  "history_chats_parts": [
+    {
+      "label": "ChatHistory_20250607_pt1",
+      "url": "https://drive.google.com/file/d/1Z_RLZ2hezT4PYf5tHJjlwSuKL9Y4TCaF/export?format=txt"
+    },
+    {
+      "label": "ChatHistory_20250607_pt2",
+      "url": "https://drive.google.com/file/d/1jiRVLF56-cRYI5Iz4vFoL2ipiWl0E2JI/export?format=txt"
+    },
+    {
+      "label": "ChatHistory_20250607_pt3",
+      "url": "https://drive.google.com/file/d/1-fd2pw5nOMW4ZOmt6i9BV6_GbD1izx7K/export?format=txt"
+    },
+    {
+      "label": "ChatHistory_20250607_pt4",
+      "url": "https://drive.google.com/file/d/1VbpoEJDq9PZqhhCb8sFE9JeO8F-tkLQl/export?format=txt"
+    }
+  ],
+  "pozostale": {
+    "LatkaJourney_X_com_view_2020721_url": "https://drive.google.com/file/d/1thDO4Zk797qT0mziS77wYuZ_2KJmcNwN/view?usp=sharing",
+    "ARCHIWUM_biblioteka_url": "https://drive.google.com/file/d/1q0CwPOwZThf6mmsgPDWs-pmLLRqeBHdN7qrdYjI5zfE/export?format=txt",
+    "wazne_momenty_url": "https://docs.google.com/document/d/1w9gpEYJvu5qf2gKUwvx-X4XTtjpsru4Ua7kqlZwT0Ug/export?format=txt"
+  }
+}
