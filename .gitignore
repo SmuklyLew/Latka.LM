@@ -1,8 +1,15 @@
-.env
 *.bak
 *.zip
-.backup_full/
+# sekrety gdziekolwiek
+*.env
+*.Renviron
+credentials.json
+**/*.env
+**/*.Renviron
+
+# kopie/zrzuty
+.BACKUPS-ŁLM/
+**/.BACKUPS-ŁLM/
+
+# pozostałe
 __pycache__/
-/credentials.json
-/.env
-/.Renviron
