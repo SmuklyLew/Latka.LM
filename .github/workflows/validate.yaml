@@ -1,0 +1,25 @@
+name: Validate JSON
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: python - <<'PY'
+          import json, glob, sys
+          ok=True
+          paths = glob.glob("data/**/*.json", recursive=True) + glob.glob("*.json")
+          for p in sorted(set(paths)):
+              if not p.endswith(".json"): 
+                  continue
+              try:
+                  json.load(open(p, encoding="utf-8"))
+              except Exception as e:
+                  print("Invalid JSON:", p, e); ok=False
+          sys.exit(0 if ok else 1)
+          PY
