@@ -1,6 +1,7 @@
 {
   "konfiguracja": {
     "szablon_pola": [
+		"id",
       "numer",
       "tytul",
       "emocje",
