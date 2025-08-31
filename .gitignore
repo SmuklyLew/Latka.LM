@@ -1,0 +1,6 @@
+.env
+credentials.json
+*.bak
+*.zip
+.backup_full/
+__pycache__/
