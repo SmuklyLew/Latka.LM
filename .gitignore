@@ -1,10 +1,8 @@
 .env
-credentials.json
 *.bak
 *.zip
 .backup_full/
 __pycache__/
-/.BACKUPS-ŁLM/
 /credentials.json
 /.env
 /.Renviron
