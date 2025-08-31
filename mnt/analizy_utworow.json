@@ -1,7 +1,11 @@
 {
   "konfiguracja": {
     "szablon_pola": [
+<<<<<<< HEAD
 	  "id",
+=======
+		"id",
+>>>>>>> 814fb6a3f361f89909fd52e2de7300e081228512
       "numer",
       "tytul",
       "emocje",
