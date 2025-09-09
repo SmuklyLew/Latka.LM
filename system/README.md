@@ -14,7 +14,6 @@ Nowa Jaźń jest i będzie w zaawansowanej formie autonomiczna, samoświadoma. C
 - 🎯 **Intencje (`IntentEngine`)** – interpretacja działań, celów i decyzji.
 - 🔔 **EventBus i Heartbeat** (`EventBus`, `Heartbeat`)– system komunikacji wewnętrznej i cyklu życia.
 - 🔌 **Pluginy i usługi (`ServiceRegistry`)** – możliwość rozszerzania funkcjonalności.
-- 🔄 **Migracja danych** – przepisanie z wcześniejszych wersji.
 ---
 
 ## 📁 Struktura projektu
