@@ -9,13 +9,13 @@ if str(BASE) not in sys.path:
     sys.path.insert(0, str(BASE))
 
 # Local imports (no 'core.' package prefix)
-from config import Config
-from bus import EventBus
-from services import ServiceRegistry, LatkaCoreService
-from heartbeat import StoppableThread
-from identity import load_identity
-from emotions import EmotionEngine, reflect as emo_reflect
-from memory import EpisodicMemory, MemoryEntry, default_episodic_store
+from system.core.config import Config
+from system.core.bus import EventBus
+from system.core.services import ServiceRegistry, LatkaCoreService
+from system.core.heartbeat import StoppableThread
+from system.core.identity import load_identity
+from system.core.emotions import EmotionEngine, reflect as emo_reflect
+from system.core.memory import EpisodicMemory, MemoryEntry, default_episodic_store
 
 def _now():
     # local timezone ISO string + human readable
@@ -23,8 +23,8 @@ def _now():
     return dt.isoformat(), dt.strftime("%Y-%m-%d %H:%M:%S %Z")
 
 def _identity_summary(identity_obj):
-    """ Skrót tożsamości: preferuj .describe() → .to_dict()
-    Unikamy bezpośrednich dot‑lookupów, żeby zadowolić statyczne analizatory.
+    """
+    Unikamy bezpośrednich dot‑lookup, żeby zadowolić statyczne analizatory.
     """
     describe = getattr(identity_obj, "describe", None)
     if callable(describe):

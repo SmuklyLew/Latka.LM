@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # latka_agent.py
-from emotions import EmotionEngine, mood_label
-from memory import MemoryEntry, EpisodicMemory, default_episodic_store
-from intent import IntentEngine
-from identity import LATKA
-from bus import EventBus
+from .emotions import EmotionEngine, mood_label
+from .memory import MemoryEntry, EpisodicMemory, default_episodic_store
+from .intent import IntentEngine
+from .identity import LATKA
+from .bus import EventBus
 import time, random
 
 class LatkaAgent:

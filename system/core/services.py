@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
 import time, logging
-from heartbeat import HeartbeatMixin
+from .heartbeat import HeartbeatMixin
 
 log = logging.getLogger("jazn.services")
 

@@ -6,7 +6,7 @@ from dataclasses import dataclass, asdict
 from pathlib import Path
 from datetime import datetime
 import hashlib
-from config import DATA_DIR
+from .config import DATA_DIR
 
 
 @dataclass

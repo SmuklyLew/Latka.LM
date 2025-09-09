@@ -2,12 +2,13 @@
 # Placeholder integracji GitHub (realne połączenia poza runtime ChatGPT)
 from __future__ import annotations
 import os, threading, time
-from core.github_sync import GitHubSync, SyncConfig
+from system.core.github_sync import GitHubSync, SyncConfig
+
 
 class GitHubPlugin:
-    """Lekki wrapper wokół GitHubSync — integruje się z eventami Jaźni."""
+    """Lekki wrapper wokół GitHub_Sync — integruje się z eventami Jaźni."""
     id = "github"
-    def __init__(self, **kwargs):
+    def __init__(self):
         self.running = False
         self.cfg = SyncConfig()
         self.sync = GitHubSync(self.cfg)

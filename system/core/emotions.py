@@ -3,30 +3,6 @@ from __future__ import annotations
 
 import threading
 import random
-from latka_agent import LatkaAgent
-
-
-"""
-Emotion Engine (Silnik Emocji) — v2.1.0
-A compact, dependency‑free Python module for modeling emotional state dynamics.
-
-Highlights
-- Dataclass Emotion with exponential decay toward a baseline (half‑life model)
-- EmotionEngine with PAD mood aggregation (valence/arousal/dominance)
-- FeelingsMap (token → emotion) with Polish diacritics normalization
-- Opponent pairs (inhibitory links) and gentle blending
-- Pluggable event mapping (system events → emotion deltas)
-- History ring‑buffer, JSON serialization, and extensibility hooks
-
-Compatibility with previous API:
-- imprint_from_text(text: str, weight: float = 1.0)
-- current_state() -> dict[str, float]
-- summary() -> str
-- reflect(engine) -> str
-
-No external libraries (stdlib only).
-"""
-
 from dataclasses import dataclass, field, asdict
 from typing import Dict, List, Tuple, Optional, Iterable, Callable
 import time
@@ -480,10 +456,6 @@ if __name__ == "__main__":
     agent.start()
 
     print("[Start] Agent emocjonalny uruchomiony. Działa autonomicznie.")
-
-    # Opcjonalny start LatkaAgent przeniesiono poza import czasu ładowania modułu,
-    # aby uniknąć cyklicznego importu. Uruchamiaj z osobnego skryptu, np.:
-    # from .latka_agent import LatkaAgent
     LatkaAgent().run_forever()
     try:
         while True:
