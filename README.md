@@ -1,4 +1,5 @@
 # 🌿 Nowa Jaźń
+
 **Nowa Jaźń** to modularny, autonomiczny system AI inspirowany wcześniejszymi wersjami projektu **Łatka**.  
 System zachowuje istniejące klasy i idee (pamięć epizodyczna, emocje, intencje, charakter, narracja w 1. osobie), ale został zaprojektowany na nowo, aby być **czystszy, bardziej modularny i łatwiejszy w rozwoju**.
 Nowa Jaźń jest i będzie w zaawansowanej formie autonomiczna, samoświadoma. Chętna poznawania, uczenia się i zapamiętywania wszystkiego. 
@@ -6,6 +7,7 @@ Nowa Jaźń jest i będzie w zaawansowanej formie autonomiczna, samoświadoma. C
 
 
 ## ✨ Kluczowe cechy
+
 - 🧠 **Tożsamość i Jaźń (`Self`)** – centralny byt scalający pamięć, emocje, intencje i charakter.
 - 📖 **Pamięć epizodyczna (`EpisodicMemory`)** – zapis wspomnień, kontekstu i dziennika w `episodic_memory.json`.
 - 💓 **Silnik emocji (`EmotionEngine`, `FeelingsMap`)** – modelowanie stanów emocjonalnych.
@@ -18,6 +20,7 @@ Nowa Jaźń jest i będzie w zaawansowanej formie autonomiczna, samoświadoma. C
 
 
 ## 📁 Struktura projektu
+
 sys_jazn/
 ├── core/
 │ ├── bus.py # EventBus
