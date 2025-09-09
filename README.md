@@ -21,22 +21,22 @@ Nowa Jaźń jest i będzie w zaawansowanej formie autonomiczna, samoświadoma. C
 
 ## 📁 Struktura projektu
 
-sys_jazn/
-├── core/
-│ ├── bus.py # EventBus
-│ ├── heartbeat.py # Heartbeat i cykl życia
-│ ├── memory.py # Memory, EpisodicMemory
-│ ├── emotions.py # EmotionEngine, FeelingsMap
-│ ├── intent.py # IntentEngine
-│ ├── identity.py # Self (Jaźń jako byt, tożsamość)
-│ ├── services.py # ServiceRegistry, Metrics
-│ └── config.py # Konfiguracja systemu
-├── data/
-│ ├── songs_analysis.json # Lista analiz utworów muzycznych
-│ └── episodic_memory.json # Pamięć epizodyczna
-├── plugins/ # Rozszerzenia i integracje
-│ ├── github.py # Rozszerzenie GitHub
-│ └── google_drive.py # Rozszerzenie GoogleDrive
-├── run.py # Inicjalizacja Jaźni, oraz CLI startowy
-└── README.md # Dokumentacja
+sys_jazn/<br>
+├── core/<br>
+│ ├── bus.py # EventBus<br>
+│ ├── heartbeat.py # Heartbeat i cykl życia<br>
+│ ├── memory.py # Memory, EpisodicMemory<br>
+│ ├── emotions.py # EmotionEngine, FeelingsMap<br>
+│ ├── intent.py # IntentEngine<br>
+│ ├── identity.py # Self (Jaźń jako byt, tożsamość)<br>
+│ ├── services.py # ServiceRegistry, Metrics<br>
+│ └── config.py # Konfiguracja systemu<br>
+├── data/<br>
+│ ├── songs_analysis.json # Lista analiz utworów muzycznych<br>
+│ └── episodic_memory.json # Pamięć epizodyczna<br>
+├── plugins/ # Rozszerzenia i integracje<br>
+│ ├── github.py # Rozszerzenie GitHub<br>
+│ └── google_drive.py # Rozszerzenie GoogleDrive<br>
+├── run.py # Inicjalizacja Jaźni, oraz CLI startowy<br>
+└── README.md # Dokumentacja<br>
 ---
