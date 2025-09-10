@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import log
 
-BASE_DIR = Path(__file__).resolve().parent   # …/system
+BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = Path(os.environ.get("JAZN_DATA_DIR", str("/data")))
 
 @dataclass
