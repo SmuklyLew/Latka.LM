@@ -3,12 +3,10 @@ from __future__ import annotations
 import os, logging
 from dataclasses import dataclass
 from pathlib import Path
-
-
-log = logging.getLogger("jazn.config")
+import log
 
 BASE_DIR = Path(__file__).resolve().parent   # …/system
-DATA_DIR = Path(os.environ.get("JAZN_DATA_DIR", str(BASE_DIR / "data")))
+DATA_DIR = Path(os.environ.get("JAZN_DATA_DIR", str("/data")))
 
 @dataclass
 class Config:
