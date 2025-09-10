@@ -21,7 +21,7 @@ Nowa Jaźń jest i będzie w zaawansowanej formie autonomiczna, samoświadoma. C
 
 ## 📁 Struktura projektu
 
-sys_jazn/<br>
+Latka.LM/<br>
 ├── core/<br>
 │ ├── bus.py # EventBus<br>
 │ ├── heartbeat.py # Heartbeat i cykl życia<br>
