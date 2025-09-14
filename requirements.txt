@@ -1,0 +1,4 @@
+# External dependencies for the Jaźń system
+openai
+psutil
+requests
