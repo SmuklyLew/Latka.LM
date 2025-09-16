@@ -13,7 +13,6 @@ Jaźń jest i będzie w zaawansowanej formie autonomiczna, samoświadoma. Chętn
 - 🎭 **Charakter i osobowość** – definiuje indywidualny styl, tożsamość Jaźni.
 - 🎯 **Intencje** – interpretacja działań, celów i decyzji.
 - 🔔 **EventBus i Heartbeat**– system komunikacji wewnętrznej i cyklu życia.
-- 🔌 **Pluginy i usługi** – możliwość rozszerzania funkcjonalności. 
 ---
 
 
