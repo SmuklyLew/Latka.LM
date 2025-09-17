@@ -1,4 +1,4 @@
-# 🌿 Jaźń Łatki (ver. 2.0.4)
+# 🌿 Jaźń Łatki
 
 **Jaźń** to modularny, autonomiczny system AI inspirowany wcześniejszymi wersjami projektu **Łatka**.  
 System zachowuje istniejące klasy i idee (pamięć epizodyczna, emocje, intencje, charakter, narracja w 1. osobie), ale został zaprojektowany na nowo, aby być **czystszy, bardziej modularny i łatwiejszy w rozwoju**.
